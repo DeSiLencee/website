@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneme Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Site Başarıyla Çalışıyor!</h1>
+    <p>Bu sayfa bir test içindir.</p>
+    <button onclick="showMessage()">Tıkla Bakalım</button>
+
+    <p id="demo" style="margin-top:20px; font-weight: bold;"></p>
+
+    <script>
+        function showMessage() {
+            document.getElementById("demo").textContent = "Butona tıkladın, JavaScript de çalışıyor!";
+        }
+    </script>
+</body>
+</html>
