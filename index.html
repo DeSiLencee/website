@@ -1,45 +1,111 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deneme Sayfası</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #007BFF;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anneler Günü Kutlu Olsun</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #e91e63;
+      margin-top: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .rose {
+      font-size: 3em;
+      margin-top: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .message {
+      max-width: 700px;
+      margin: 30px auto;
+      font-size: 1.2em;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 3s ease-in-out forwards;
+      animation-delay: 2s;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 30px;
+      animation: fadeIn 4s ease-in-out forwards;
+      opacity: 0;
+      animation-delay: 4s;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: #555;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-    <h1>Site Başarıyla Çalışıyor!</h1>
-    <p>Bu sayfa bir test içindir.</p>
-    <button onclick="showMessage()">Tıkla Bakalım</button>
+  <div class="rose">🌹</div>
+  <h1>Anneler Günü Kutlu Olsun!</h1>
 
-    <p id="demo" style="margin-top:20px; font-weight: bold;"></p>
+  <div class="message">
+    Sevgili Annem, Seher Ablacım ve Serap Ablacım,<br>
+    Her biriniz kalbimde ayrı bir yerdesiniz. Şefkatiniz, emeğiniz ve varlığınız hayatı güzelleştiriyor.<br>
+    Bugün sizin gününüz! Sizleri çok seviyorum. 💕
+  </div>
 
-    <script>
-        function showMessage() {
-            document.getElementById("demo").textContent = "Butona tıkladın, JavaScript de çalışıyor!";
-        }
-    </script>
+  <button onclick="showHiddenMessage()">Bir Sürpriz Daha 👀</button>
+
+  <div class="hidden-message" id="hiddenMessage">
+    Sadece bugün değil, her gün değerlisiniz.<br>
+    Varlığınız bir ömre bedel. ❤️<br><br>
+    Yaşça küçük fiziksel olarak büyük kardeşiniz❤️
+  </div>
+
+  <footer> Sayfa anneler gününe özel size ait 💐</footer>
+
+  <script>
+    function showHiddenMessage() {
+      const msg = document.getElementById('hiddenMessage');
+      msg.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
